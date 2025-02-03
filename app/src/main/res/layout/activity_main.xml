@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screenBackgroundColor"
+    tools:context=".MainActivity">
+
+<!--Edit texts for inputs-->
+    <!--Input 1-->
+    <EditText
+        android:id="@+id/edtTxtInput1"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="60dp"
+        android:background="@color/editTextColor"
+        android:inputType="numberDecimal"
+        android:hint="0.0"
+        android:textAlignment="center"
+        android:textSize="@dimen/textSize"
+        />
+
+    <!--Input 2-->
+    <EditText
+        android:id="@+id/edtTxtInput2"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@id/edtTxtInput1"
+        android:layout_marginLeft="10dp"
+        android:background="@color/editTextColor"
+        android:inputType="numberDecimal"
+        android:hint="0.0"
+        android:textAlignment="center"
+        android:textSize="@dimen/textSize"
+        />
+
+<!--Operation buttons-->
+
+    <!--Addition-->
+    <Button
+        android:id="@+id/btnAddition"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/edtTxtInput1"
+        android:layout_marginLeft="10dp"
+        android:backgroundTint="@color/buttonColor"
+        android:textSize="@dimen/textSize"
+        android:text="+"
+        android:onClick="addition"
+        />
+    <!--subtraction-->
+    <Button
+        android:id="@+id/btnSubtraction"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/edtTxtInput1"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@id/btnAddition"
+        android:backgroundTint="@color/buttonColor"
+        android:textSize="@dimen/textSize"
+        android:text="-"
+        android:onClick="subtraction"
+        />
+    <!--Multiplication-->
+    <Button
+        android:id="@+id/btnMultiplication"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/edtTxtInput1"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@id/btnSubtraction"
+        android:backgroundTint="@color/buttonColor"
+        android:textSize="@dimen/textSize"
+        android:text="*"
+        android:onClick="multiplication"
+        />
+
+    <!--Division-->
+    <Button
+        android:id="@+id/btnDivision"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/edtTxtInput1"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@id/btnMultiplication"
+        android:backgroundTint="@color/buttonColor"
+        android:textSize="@dimen/textSize"
+        android:text="/"
+        android:onClick="division"
+        />
+
+    <!--Result text view-->
+    <TextView
+        android:id="@+id/txtViewResult"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnMultiplication"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@color/textViewColor"
+        android:hint="Result"
+        android:textSize="@dimen/textSize"
+        android:textAlignment="center"
+        />
+
+</RelativeLayout>
